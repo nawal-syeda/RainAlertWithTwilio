@@ -31,8 +31,8 @@ Create a `.env` file in the root directory (never commit this):
 ```
 LAT=your_latitude
 LON=your_longitude
-ACCOUNT_SID=your_twilio_account_sid
-AUTH_TOKEN=your_twilio_auth_token
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
 TWILIO_FROM_NUMBER=your_twilio_number
 TWILIO_TO_NUMBER=your_personal_number
 ```
@@ -54,8 +54,8 @@ To run this automatically every 3 hours in the cloud:
 |---|---|
 | `LAT` | Your latitude |
 | `LON` | Your longitude |
-| `ACCOUNT_SID` | Twilio Account SID |
-| `AUTH_TOKEN` | Twilio Auth Token |
+| `TWILIO_ACCOUNT_SID` | Twilio Account SID |
+| `TWILIO_AUTH_TOKEN` | Twilio Auth Token |
 | `TWILIO_FROM_NUMBER` | Your Twilio number |
 | `TWILIO_TO_NUMBER` | Your personal number |
 
@@ -92,8 +92,8 @@ jobs:
         env:
           LAT: ${{ secrets.LAT }}
           LON: ${{ secrets.LON }}
-          TWILIO_ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
-          TWILIO_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
           TWILIO_FROM_NUMBER: ${{ secrets.TWILIO_FROM_NUMBER }}
           TWILIO_TO_NUMBER: ${{ secrets.TWILIO_TO_NUMBER }}
         run: python main.py
