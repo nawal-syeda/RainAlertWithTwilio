@@ -27,4 +27,8 @@ jobs:
         env:
           LAT: ${{ secrets.LAT }}
           LON: ${{ secrets.LON }}
+          AUTH_TOKEN : ${{ secrets.AUTH_TOKEN}}
+          TWILIO_FROM_NUMBER : ${{ secrets.TWILIO_FROM_NUMBER}}
+          TWILIO_TO_NUMBER : ${{ secrets.TWILIO_TO_NUMBER}}
+          
         run: python main.py
