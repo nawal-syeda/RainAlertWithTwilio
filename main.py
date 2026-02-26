@@ -3,11 +3,11 @@ from twilio.rest import Client
 import os
 load_dotenv(dotenv_path=".env")
 
-OWM_API_KEY = os.environ.get("OWM_API_KEY")
+
 LAT = os.environ.get("LAT")
 LON = os.environ.get("LON")
-ACCOUNT_SID = os.environ.get("ACCOUNT_SID")
-AUTH_TOKEN = os.environ.get("AUTH_TOKEN")
+ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
+AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
 TWILIO_FROM_NUMBER = os.environ.get("TWILIO_FROM_NUMBER")
 TWILIO_TO_NUMBER = os.environ.get("TWILIO_TO_NUMBER")
 
